@@ -1,0 +1,25 @@
+# Definir a placa ESP32
+BOARD_TAG = esp32
+BOARD_SUB = esp32
+
+# Definir se está usando o framework ESP-IDF ou Arduino
+ESP_PLATFORM = true
+
+# Caminhos de diretórios (ajuste conforme o seu sistema)
+ARDUINO_DIR = $(HOME)/.arduino15/packages/esp32/hardware/esp32/1.0.6/
+ARDMK_DIR = /usr/share/arduino/
+AVR_TOOLS_DIR = /usr/
+ESP32_TOOLS_DIR = $(HOME)/.arduino15/packages/esp32/tools/esptool_py/3.1.0/
+ESP32_SDK_DIR = $(HOME)/.arduino15/packages/esp32/hardware/esp32/1.0.6/
+
+# Porta serial do ESP32 (pode mudar conforme o dispositivo)
+MONITOR_PORT = /dev/ttyUSB0
+
+# Frequência de clock do ESP32
+F_CPU = 240000000L
+
+# Vendor do ESP32
+ARDMK_VENDOR = esp32
+
+# Incluir o arquivo Arduino.mk
+include $(ARDMK_DIR)/Arduino.mk
